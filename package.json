@@ -1,0 +1,26 @@
+{
+  "name": "wallet-tracker",
+  "version": "1.0.0",
+  "description": "An Ethereum smart contract for tracking wallet activity.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "keywords": [
+    "ethereum",
+    "smart-contract",
+    "solidity",
+    "blockchain"
+  ],
+  "author": "bowtiedbluesage",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.4",
+    "truffle": "^5.4.21"
+  }
+}
+
