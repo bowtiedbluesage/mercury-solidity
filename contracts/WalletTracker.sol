@@ -20,7 +20,7 @@ contract WalletTracker {
     }
 
     // This function accepts ether and stores a record of the transaction
-    function receive() external payable {
+    function recordTransaction() external payable {
         require(msg.sender == trackedWallet, "Only the tracked wallet can interact with this contract.");
         transactions[msg.sender].push(WalletTransaction(msg.sender, block.timestamp, msg.value));
     }
