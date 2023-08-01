@@ -6,7 +6,12 @@
   "directories": {
     "test": "test"
   },
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@openzeppelin/contracts": "^4.9.3",
     "abort-controller": "^3.0.0",
     "abortcontroller-polyfill": "^1.7.5",
     "abstract-leveldown": "^7.2.0",
@@ -481,8 +486,8 @@
     "sshpk": "^1.17.0",
     "statuses": "^2.0.1",
     "strict-uri-encode": "^1.1.0",
-    "string-width": "^1.0.2",
     "string_decoder": "^1.3.0",
+    "string-width": "^1.0.2",
     "strip-ansi": "^4.0.0",
     "strip-bom": "^2.0.0",
     "strip-hex-prefix": "^1.0.0",
@@ -584,9 +589,6 @@
   },
   "devDependencies": {
     "mocha": "^10.1.0"
-  },
-  "scripts": {
-    "test": "mocha"
   },
   "author": "bowtiedbluesage",
   "license": "ISC"

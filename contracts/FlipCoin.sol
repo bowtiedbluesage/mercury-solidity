@@ -22,10 +22,7 @@ contract CoinFlip is VRFConsumerBase {
         _;
     }
 
-    constructor() VRFConsumerBase(
-        0xf0d54349aDdcf704F77AE15b96510dEA15cb7952, // VRF Coordinator
-        0x514910771AF9Ca656af840dff83E8264EcF986CA  // LINK Token
-    ) {
+    constructor(address _vrfCoordinator, address _linkToken) VRFConsumerBase(_vrfCoordinator, _linkToken) {
         keyHash = 0xced103054e349b8dfb51352f0f8fa9b5d20dde3d06f9f43cb2b85bc64b238205;
         fee = 0.1 * 10 ** 18; // 0.1 LINK (varies by network)
         owner = msg.sender;
