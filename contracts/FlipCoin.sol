@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@chainlink/contracts/src/v0.8/VRFConsumerBase.sol";
 
-contract CoinFlip is VRFConsumerBase {
+contract FlipCoin is VRFConsumerBase {
     enum Bet { Heads, Tails }
     struct Game {
         address payable player;
@@ -26,6 +26,9 @@ contract CoinFlip is VRFConsumerBase {
         keyHash = 0xced103054e349b8dfb51352f0f8fa9b5d20dde3d06f9f43cb2b85bc64b238205;
         fee = 0.1 * 10 ** 18; // 0.1 LINK (varies by network)
         owner = msg.sender;
+    }
+
+    receive() external payable {
     }
 
     function bet(Bet betChoice) external payable {
